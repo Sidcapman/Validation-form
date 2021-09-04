@@ -31,6 +31,7 @@ function checkInput() {
     setSuccess(password1);
   }
 }
+
 function setError(input, message) {
   const form = input.parentElement;
   const small = form.querySelector("small");
@@ -41,6 +42,11 @@ function setError(input, message) {
 function setSuccess(username) {
   username.parentElement.className = "form-control success";
 }
+
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
 var smallee = document.getElementById("cpass");
 password1.addEventListener("blur", function () {
   // var parent = password1.parentElement;
