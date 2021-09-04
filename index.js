@@ -11,7 +11,11 @@ function checkInput() {
   }
   if (email.value == "") {
     setError(email, "E-Mail cannot be blank");
-  } else {
+  }else if(!isEmail(email))
+  {
+    setError(email,'Please Enter a Valid Email');
+  }
+  else {
     setSuccess(email);
   }
   if (password.value == "") {
