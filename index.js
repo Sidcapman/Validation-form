@@ -11,7 +11,7 @@ function checkInput() {
   }
   if (email.value == "") {
     setError(email, "E-Mail cannot be blank");
-  }else if(!isEmail(email))
+  }else if(!isEmail(email.value))
   {
     setError(email,'Please Enter a Valid Email');
   }
